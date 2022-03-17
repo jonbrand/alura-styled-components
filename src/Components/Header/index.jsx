@@ -7,9 +7,9 @@ export const Header = () => {
     <HeaderContainer>
       <Logo src={bank_logo} alt="Logo Smart Bank" />
       <div>
-        <a className="btn-secundario" href="https://google.com">
+        <BtnHeader primary href="https://google.com">
           Ajuda
-        </a>
+        </BtnHeader>
         <BtnHeader href="https://google.com">
           Sair
         </BtnHeader>

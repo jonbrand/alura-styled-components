@@ -26,4 +26,5 @@ export const BtnHeader = styled.a`
   border: 2px solid white;
 
   background: ${(props) => (props.primary ? "white" : primaryColor)};
+  color: ${(props) => (props.primary ? primaryColor : "white")};
 `;

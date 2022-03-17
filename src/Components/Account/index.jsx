@@ -4,7 +4,10 @@ import privado from "../../assets/images/privado.svg";
 import olho_icone from "../../assets/images/olho.svg";
 import dinheiro from "../../assets/images/dinheiro.svg";
 
-const Conta = () => {
+import { Icon, Box, Button, Details, Balance } from "../../UI";
+import { IconMargin } from "./styles";
+
+export const Account = () => {
   const [toggleState, untoggle] = useState(true);
 
   const toggleHandler = () => {
@@ -12,30 +15,26 @@ const Conta = () => {
   };
 
   return (
-    <div className="box">
+    <Box>
       <h2>Conta</h2>
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
-          <img className="imagem-icone" src={dinheiro} alt="Ícone Saldo" />
+          <Icon src={dinheiro} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
-          <div className="saldo">
-            <span className="detalhe">R$</span> 0,00{" "}
-          </div>
+          <Balance>
+            <Details>R$</Details> 0,00{" "}
+          </Balance>
         ) : null}
       </div>
 
-      <button className="btn" onClick={toggleHandler}>
-        <img
-          style={{ marginTop: "2px" }}
-          className="imagem-icone"
+      <Button onClick={toggleHandler}>
+        <IconMargin
           src={toggleState ? privado : olho_icone}
           alt="Privacidade do Saldo"
         />
-      </button>
-    </div>
+      </Button>
+    </Box>
   );
 };
-
-export default Conta;
