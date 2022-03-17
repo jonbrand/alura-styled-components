@@ -1,4 +1,4 @@
-export const extratoLista = {
+export const listStatement = {
   updates: [
     {
       id: "123131321",
